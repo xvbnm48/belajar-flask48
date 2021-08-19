@@ -1,10 +1,7 @@
-from app import app
+from app import api, web
+from app.controllers import MyController, MyViewController
 
-@app.route('/')
-@app.route('/index')
-def index():
-    return "Hello, World!"
+api.add_resource(MyController.MyController, '/')
 
-@app.route('/belajar-flask')
-def belajar_flask():
-    return "aku sedang belajar flask!"
+# Tambahkan route ini
+web.add_resource(MyViewController.MyViewController, '/')
