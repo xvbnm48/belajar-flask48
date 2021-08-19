@@ -5,3 +5,4 @@ api.add_resource(MyController.MyController, '/')
 
 # Tambahkan route ini
 web.add_resource(MyViewController.MyViewController, '/')
+web.add_resource(MyViewController.MySecondViewController, '/say-my-name')
